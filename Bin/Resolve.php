@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * Hoa
  *
@@ -45,9 +47,6 @@ use Hoa\Socket;
  * Class Hoa\Dns\Bin\Resolve.
  *
  * Quick DNS resolver.
- *
- * @copyright  Copyright © 2007-2017 Hoa community
- * @license    New BSD License
  */
 class Resolve extends Console\Dispatcher\Kit
 {
@@ -66,8 +65,6 @@ class Resolve extends Console\Dispatcher\Kit
 
     /**
      * The entry method.
-     *
-     * @return  int
      */
     public function main()
     {
@@ -149,8 +146,6 @@ class Resolve extends Console\Dispatcher\Kit
 
     /**
      * The command usage.
-     *
-     * @return  int
      */
     public function usage()
     {

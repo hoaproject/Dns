@@ -1,5 +1,7 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * Hoa
  *
@@ -44,9 +46,6 @@ use Hoa\Socket;
  *
  * Provide a DNS resolution server.
  * Please, see RFC6195, RFC1035 and RFC1034 for an overview.
- *
- * @copyright  Copyright © 2007-2017 Hoa community
- * @license    New BSD License
  */
 class Resolver implements Event\Listenable
 {
@@ -55,7 +54,7 @@ class Resolver implements Event\Listenable
     /**
      * Socket.
      *
-     * @var \Hoa\Socket
+     * @var Socket
      */
     protected $_server         = null;
 
@@ -151,8 +150,6 @@ class Resolver implements Event\Listenable
 
     /**
      * Construct the DNS server.
-     *
-     * @param   \Hoa\Socket\Server  $server    Server.
      */
     public function __construct(Socket\Server $server)
     {
@@ -174,8 +171,6 @@ class Resolver implements Event\Listenable
 
     /**
      * Run the server.
-     *
-     * @return  void
      */
     public function run()
     {
